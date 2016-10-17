@@ -23,8 +23,8 @@ require 'sinatra/cross_origin'
 require 'bcrypt'
 require 'erb'
 require 'haml'
-require 'dotenv'
-Dotenv.load
+# require 'dotenv'
+# Dotenv.load
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
