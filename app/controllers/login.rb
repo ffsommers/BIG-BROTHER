@@ -7,8 +7,8 @@ get '/login' do
 end
 
 post '/login' do
-  @user = User.find_by_email(params[:email])
-  if @user.password == params[:password]
+  @user = User.find_by(params[:username])
+  if @user.password == params[:hashed_password]
     session[:id] = @user.id
     redirect '/app'
   else

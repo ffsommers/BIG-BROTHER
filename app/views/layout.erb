@@ -4,7 +4,7 @@
 
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
-  
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
@@ -12,6 +12,7 @@
   <title></title>
 </head>
 <body>
+
 <header>
     <div>
       <nav>
@@ -23,11 +24,17 @@
       </nav>
     </div>
 </header>
- <%= yield%>
+  <% if current_user %>
+    <%= erb :'tweets/app' %>
+  <% else%>
+    <%= erb :'users/login'%>
+  <%end%>
+  <%= yield%>
  <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </body>
 </html>
