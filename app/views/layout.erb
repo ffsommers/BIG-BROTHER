@@ -19,17 +19,17 @@
 
           <%# if current_user %>
               <%=# erb :'nav/logged_in'  %>
-          <%else%>
+          <%#else%>
               <%=# erb :'nav/logged_out' %>
-          <%end %>
+          <%#end %>
       </nav>
     </div>
 </header>
-  <% if# current_user %>
-    <%= erb :'tweets/app' %>
-  <% else%>
+  <%# if# current_user %>
+    <%=# erb :'tweets/app' %>
+  <%# else%>
     <%= erb :'users/login'%>
-  <%end%>
+  <%#end%>
   <%= yield%>
  <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
