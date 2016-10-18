@@ -1,9 +1,8 @@
 
 
 <div class="content-wrapper">
+
   <div id="map"></div>
-
-
 
 
     <div class= "leftbox">
@@ -15,17 +14,13 @@
       <h2>CLINTON TWEETS</h2>
          <a class="twitter-timeline" href="https://twitter.com/HillaryClinton">Tweets by HillaryClinton</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
-    <div></div>
+
 </div>
 
 <!-- Map scripts  -->
 
-   <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=<%=@map_key%>&callback=initMap">
-    </script>
+<script type="text/javascript">
 
-
-   <script type="text/javascript">
       var map;
       var tweets;
       // generate map
@@ -34,7 +29,6 @@
           center: {lat: 37.773972, lng: -122.431297},
           zoom: 6
         });
-
 
         <%@tweet = Tweet.all%>
         <%@tweet.each do |tweet|%>
@@ -53,5 +47,7 @@
         });
       }
 
+</script>
 
-    </script>
+
+

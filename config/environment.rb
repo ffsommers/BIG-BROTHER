@@ -23,6 +23,7 @@ require 'sinatra/cross_origin'
 require 'bcrypt'
 require 'erb'
 require 'haml'
+@map_key=ENV['MAP_KEY']
 # require 'dotenv'
 # Dotenv.load
 # Some helper constants for path-centric logic
