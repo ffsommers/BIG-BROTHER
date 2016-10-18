@@ -16,15 +16,16 @@
 <header>
     <div>
       <nav>
-          <% if current_user %>
-              <%= erb :'nav/logged_in'  %>
+
+          <%# if current_user %>
+              <%=# erb :'nav/logged_in'  %>
           <%else%>
-              <%= erb :'nav/logged_out' %>
+              <%=# erb :'nav/logged_out' %>
           <%end %>
       </nav>
     </div>
 </header>
-  <% if current_user %>
+  <% if# current_user %>
     <%= erb :'tweets/app' %>
   <% else%>
     <%= erb :'users/login'%>
