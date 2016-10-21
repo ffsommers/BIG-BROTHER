@@ -23,28 +23,28 @@ $(document).ready(function() {
 });
 });
 var dbButtonTrigger = function(){
- $('.tools').on('click',"#dbTrig",function(event){
+   $('.tools').on('click',"#dbTrig",function(event){
     event.preventDefault();
     console.log("DB BUTTON PRESSED");
 
     setInterval(function(){
         console.log("ADDING HELLA TWEETS TO DB");
         var request = $.ajax({
-           url: "/tools",
-           method: "GET"
-       })
+         url: "/tools",
+         method: "GET"
+     })
         .done(function(response){
 
-         alert("tweets are now being processed");
+           alert("tweets are now being processed");
 
-          });
+       });
     }, 35000);
 });
 }
 
 
 var trump_streamListener = function(){
-   $('#feed-config').on('click',"#trump",function(event){
+ $('#feed-config').on('click',"#trump",function(event){
     event.preventDefault();
     console.log("BUTTON PRESSED");
             // ajax call to get more tweets for partial
@@ -54,9 +54,9 @@ var trump_streamListener = function(){
     setInterval(function(){
         console.log("TRUMP RETWEETS");
         var request = $.ajax({
-           url: "/app",
-           method: "GET"
-       })
+         url: "/app",
+         method: "GET"
+     })
         .done(function(response){
           var obj = JSON.parse(response);
           obj.map(function(curObj){
@@ -68,16 +68,16 @@ var trump_streamListener = function(){
               // $('.left-box').append(currentObject.text);
               // });
           });
-    }, 35000);
+    }, 20000);
 });
 }
 
 var heatMapListener = function(){
-   $('#feed-config').on('click','#heat', function(event){
+ $('#feed-config').on('click','#heat', function(event){
     event.preventDefault();
     toggleHeatmap();
 });
-   $('#feed-config').off('click','#heat', function(event){
+ $('#feed-config').off('click','#heat', function(event){
     event.preventDefault();
     toggleHeatmap();
 });
@@ -116,11 +116,11 @@ var map, heatmap;
 
 
     function toggleHeatmap() {
-     console.log("TOGGLED HEAT!");
-     heatmap.setMap(map);
- }
+       console.log("TOGGLED HEAT!");
+       heatmap.setMap(map);
+   }
 
- function changeGradient() {
+   function changeGradient() {
     var gradient = [
     'rgba(0, 255, 255, 0)',
     'rgba(0, 255, 255, 1)',
