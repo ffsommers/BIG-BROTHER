@@ -34,29 +34,19 @@ h2 {
 }
 
 .leftbox {
-margin-left: 30px;
-
-
+  margin-left: 30px;
   margin-top: 50px;
   float:left;
   width: 45%;
-
-
+ box-shadow: 10px 21px 33px 10px rgba(0,0,0,0.39);
 }
 .rightbox{
-
   margin-right: 30px;
-
-
   margin-top: 50px;
   float:right;
   width: 45%;
-
-/*  border:solid blue 5px;*/
-/*  border-radius: 2%;*/
-
+   box-shadow: 10px 21px 33px 10px rgba(0,0,0,0.39);
 }
-
 
 /*----------------*/
 
