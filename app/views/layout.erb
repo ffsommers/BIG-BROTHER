@@ -14,11 +14,11 @@
 
 
   <nav>
-    <%# if current_user %>
-    <%#= erb :'nav/logged_in'  %>
-    <%#else%>
-    <%#= erb :'nav/logged_out' %>
-    <%#end %>
+    <% if current_user %>
+    <%= erb :'nav/logged_in'  %>
+    <%else%>
+    <%= erb :'nav/logged_out' %>
+    <%end %>
   </nav>
 
 
