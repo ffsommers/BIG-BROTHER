@@ -21,7 +21,7 @@ gem 'haml'
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'pg'
+
   gem 'rack-test'
   gem 'rspec', '~>3.0'
   gem 'capybara'
@@ -31,6 +31,6 @@ end
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
-  gem 'pg'
+
   # gem 'dotenv'
 end
