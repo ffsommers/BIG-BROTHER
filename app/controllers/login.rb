@@ -13,7 +13,7 @@ post '/login' do
     redirect '/app'
   else
    erb :"login"
-  end
+ end
 end
 
 get '/log_out' do
