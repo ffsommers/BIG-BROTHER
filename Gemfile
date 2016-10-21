@@ -9,7 +9,7 @@ gem 'pg'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem "sinatra-cross_origin", "~> 0.3.1"
-
+gem 'activerecord-jdbcpostgresql-adapter'
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
 gem 'twitter'
