@@ -31,7 +31,6 @@ GEM
     diff-lcs (1.2.5)
     domain_name (0.5.20160826)
       unf (>= 0.0.5, < 1.0.0)
-    dotenv (2.1.1)
     equalizer (0.0.10)
     factory_girl (4.7.0)
       activesupport (>= 3.0.0)
@@ -143,7 +142,6 @@ DEPENDENCIES
   activesupport (~> 4.2.0)
   bcrypt
   capybara
-  dotenv
   factory_girl
   faker
   haml
@@ -161,4 +159,4 @@ DEPENDENCIES
   unicorn
 
 BUNDLED WITH
-   1.13.2
+   1.13.3
