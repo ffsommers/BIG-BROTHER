@@ -1,7 +1,7 @@
 $(document).ready(function() {
-
+ 
   heatMapListener();
-
+  trump_streamListener();
  $(function() {
 
     $('#login-form-link').click(function(e) {
@@ -21,8 +21,31 @@ $(document).ready(function() {
 
 });
 });
+    
+    var trump_streamListener = function(){
+         $('#feed-config').on('click',"#trump",function(event){
+            event.preventDefault();
+            console.log("TRUMP RETWEETS");
+            // ajax call to get more tweets for partial
+            //remove stuff from div left box
+            var request = $.ajax({
+             url: "/app",
+             method: "GET"
+            })
+            .done(function(response){
+              var obj = JSON.parse(response);
+              obj.map(function(curObj){
+                  $('.practice').append("<h2>"+curObj.text+"</h2>");
+              });
+            
+              // obj.map(function(currentObject){
+              // $('.left-box').append(currentObject.text);
+              // });
+            });
+         });
+      }   
 
-	var heatMapListener = function (){
+	var heatMapListener = function(){
          $('#feed-config').on('click','#heat', function(event){
             event.preventDefault();
             toggleHeatmap();

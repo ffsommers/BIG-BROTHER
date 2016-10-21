@@ -1,9 +1,22 @@
 
 #app-container{
-  background: url(https://images.freecreatives.com/wp-content/uploads/2016/02/Red-Blue-Background-For-Download.jpg)center;
+  background: url(https://images.freecreatives.com/wp-content/uploads/2016/02/Red-Blue-Background-For-Download.jpg)center no-repeat;
   height: 100%;
+  width: 100%;
+    background-size: cover;
+ position: absolute;
 }
-
+.practice{
+  margin-top: 30px;
+  overflow-y:scroll; 
+  clear:both;
+  margin:auto;
+  text-align: center;
+  background-color: white;
+  width :50%;
+  
+  height:300px;
+}
 nav {
   padding-left:60%;
 }
@@ -26,14 +39,14 @@ h2 {
 #feed-config{
   padding-top: 10px;
 }
-.content-wrapper{
+/*.content-wrapper{
 
   height: 500px;
-}
+}*/
 
 #feed-container{
 
-  height:500px;
+  height:700px;
 }
 
 .leftbox {

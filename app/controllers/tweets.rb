@@ -1,8 +1,11 @@
 get '/app' do
   @map_key=ENV['MAP_KEY']
   @tweets = Tweet.all
+
+  
   if request.xhr?
-    @tweets.to_json
+  	trump_stream
+    @trump_stream_array.to_json
   else
     erb :"tweets/app"
   end

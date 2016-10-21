@@ -41,9 +41,14 @@ end
 end
 
 def trump_stream
-  @client.user({:with => '25073877'}) do |object|
-   object if object.is_a?(Twitter::Tweet)
- end
+  start_client
+  @trump_stream_array = []
+  @client.filter({:follow => '25073877'}) do |object|
+   @trump_stream_array << object if object.is_a?(Twitter::Tweet)
+   if @trump_stream_array.length > 5
+    return @trump_stream_array
+  end
+end
 end
 
 
