@@ -4,30 +4,43 @@
 
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
-  
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
-
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <title></title>
 </head>
-<body>
-<header>
-    <div>
-      <nav>
-          <% if current_user %>
-              <%= erb :'nav/logged_in'  %>
-          <%else%>
-              <%= erb :'nav/logged_out' %>
-          <%end %>
-      </nav>
-    </div>
-</header>
- <%= yield%>
- <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <nav>
+    <% if current_user %>
+    <%= erb :'nav/logged_in'  %>
+    <%else%>
+    <%= erb :'nav/logged_out' %>
+    <%end %>
+  </nav>
+
+
+<body>
+
+
+  <%# if current_user %>
+  <%#= erb :'tweets/app' %>
+  <%# else%>
+  <%#= erb :'users/login'%>
+  <%#end%>
+  <%= yield%>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+
+
 </body>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=<%=@map_key%>&libraries=visualization&callback=initMap">
+</script>
+
 </html>

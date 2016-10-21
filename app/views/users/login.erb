@@ -1,20 +1,9 @@
-<!-- <h2>Please login to your account</h2>
-<form id="login" method="post" action="/login">
-  <label for="first_name">First Name</label>
-  <input type="text" name="first_name">
-  <br>
-   <label for="last_name">Last Name</label>
-  <input type="text" name="last_name">
-  <br>
-  <label for="password">Password</label>
-  <input type="password" name="password_hash">
-  <br>
-  <label for="email">Email</label>
-  <input type="email" name="email">
-  <br>
-  <input type="submit" name="" value="login">
+<div class= "login-container">
+<div class="banner">
+  <h2>Welcome to big brother</h2>
+   <p>an analytic tool for mapping social traffic</p>
+</div>
 
-</form> -->
 
 <div class="container">
       <div class="row">
@@ -36,10 +25,10 @@
               <div class="col-lg-12">
                 <form id="login" method="post" action="/login" role="form" style="display: block;">
                   <div class="form-group">
-                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                    <input type="text" name="user[username]" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                    <input type="password" name="user[hashed_password]" id="password" tabindex="2" class="form-control" placeholder="Password">
                   </div>
                   <div class="form-group text-center">
                     <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
@@ -56,24 +45,24 @@
                     <div class="row">
                       <div class="col-lg-12">
                         <div class="text-center">
-                          <a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+                          <a href="/index" tabindex="5" class="forgot-password">Forgot Password?</a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </form>
-                <form id="register-form" action="http://phpoll.com/register/process" method="post" role="form" style="display: none;">
+                <form id="register-form" action="/users" method="post" role="form" style="display: none;">
                   <div class="form-group">
-                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                    <input type="text" name="user[username]" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                   </div>
                   <div class="form-group">
-                    <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                    <input type="email" name="user[email]" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                    <input type="password" name="user[hashed_password]" id="password" tabindex="2" class="form-control" placeholder="Password">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                    <input type="password" name="user[hashed_password]" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
                   </div>
                   <div class="form-group">
                     <div class="row">
@@ -90,7 +79,7 @@
       </div>
     </div>
   </div>
-
+  </div>
   <script type="text/javascript">
 $(function() {
 

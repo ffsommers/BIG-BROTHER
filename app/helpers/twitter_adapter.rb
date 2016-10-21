@@ -17,33 +17,38 @@ helpers do
     count = 0
 
     @client.filter({:follow => '25073877', :locations => '-122.75,36.8,-121.75,37.8'}) do |object|
-         Tweet.create!(username: object.to_h[:user][:screen_name], tweet: object.text, party: "R", lat: object.to_h[:geo][:coordinates][0], long: object.to_h[:geo][:coordinates][1]) if object.is_a?(Twitter::Tweet) && object.to_h[:geo] != nil
+     Tweet.create!(username: object.to_h[:user][:screen_name], tweet: object.text, party: "R", lat: object.to_h[:geo][:coordinates][0], long: object.to_h[:geo][:coordinates][1]) if object.is_a?(Twitter::Tweet) && object.to_h[:geo] != nil
      count += 1
-      if count > 300
-        puts "added 300 tweets to DB"
-        break
-      end
-    end
-  end
-
-
-
-  def clint_stream
-    start_client
-    @clint_RT_array = []
-    @client.filter({:follow => '1339835893', :locations => '-122.75,36.8,-121.75,37.8'}) do |object|
-      @clint_RT_array << object if object.is_a?(Twitter::Tweet)
-      if @clint_RT_array.length > 20
-        return @clint_RT_array
-      end
+     if count > 300
+      puts "added 300 tweets to DB"
+      break
     end
   end
 end
 
+
+
+def clint_stream
+  start_client
+  @clint_RT_array = []
+  @client.filter({:follow => '1339835893', :locations => '-122.75,36.8,-121.75,37.8'}) do |object|
+    @clint_RT_array << object if object.is_a?(Twitter::Tweet)
+    if @clint_RT_array.length > 20
+      return @clint_RT_array
+    end
+  end
+end
+end
+
 def trump_stream
-  @client.user({:with => '25073877'}) do |object|
-   object if object.is_a?(Twitter::Tweet)
- end
+  start_client
+  @trump_stream_array = []
+  @client.filter({:follow => '25073877'}) do |object|
+   @trump_stream_array << object if object.is_a?(Twitter::Tweet)
+   if @trump_stream_array.length > 5
+    return @trump_stream_array
+  end
+end
 end
 
 
