@@ -9,7 +9,7 @@ gem 'pg'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem "sinatra-cross_origin", "~> 0.3.1"
-gem 'activerecord-jdbcpostgresql-adapter'
+
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
 gem 'twitter'
@@ -21,16 +21,13 @@ gem 'haml'
 
 group :test do
   gem 'shoulda-matchers'
-
   gem 'rack-test'
   gem 'rspec', '~>3.0'
   gem 'capybara'
-
 end
 
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
-
   # gem 'dotenv'
 end

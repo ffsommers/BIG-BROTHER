@@ -11,6 +11,7 @@ require 'uri'
 require 'pathname'
 require 'twitter'
 require 'pg'
+
 require 'active_record'
 require 'logger'
 
